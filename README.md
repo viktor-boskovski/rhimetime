@@ -9,6 +9,7 @@ with an [IPA wordlist](https://github.com/open-dict-data/ipa-dict).
 ```sh
 $ rhimetime download list    # lists languages that you can download
 $ rhimetime download de      # downloads the language wordlist
+$ rhimetime download de,en   # downloads the languages, comma separated
 $ rhimetime find text        # looks for words rhyming with text
 $ rhimetime find --pure text # looks for pure rhymes only
 ```

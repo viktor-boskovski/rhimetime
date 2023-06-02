@@ -1,6 +1,6 @@
 mod downloader;
 
-const USAGE: &str = "// TODO: ";
+const USAGE: &str = include_str!("txt/usage.txt");
 
 pub const LANGUAGE_CODES_DESCRIPTION_MAP: [(&str, &str); 29] = [
 ("ar","Arabic (Modern Standard)"),
@@ -35,8 +35,8 @@ pub const LANGUAGE_CODES_DESCRIPTION_MAP: [(&str, &str); 29] = [
 
 
 
-
-fn main() {
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = std::env::args().collect();
     if args.len() == 1 {
         println!("{USAGE}")
@@ -55,8 +55,10 @@ fn main() {
                 }
             }
             else {
-                downloader::download(args[2].to_string())
+                downloader::download(args[2].to_string()).await?
             }
         }
     }
+
+    Ok(())
 }
