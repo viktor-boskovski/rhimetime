@@ -2,7 +2,7 @@ mod downloader;
 
 const USAGE: &str = include_str!("txt/usage.txt");
 
-pub const LANGUAGE_CODES_DESCRIPTION_MAP: [(&str, &str); 29] = [
+pub const LANGUAGE_CODES_DESCRIPTION_MAP: [(&str, &str); 30] = [
 ("ar","Arabic (Modern Standard)"),
 ("de","German"),
 ("en_UK","English (Received Pronunciation)"),
@@ -31,7 +31,8 @@ pub const LANGUAGE_CODES_DESCRIPTION_MAP: [(&str, &str); 29] = [
 ("vi_N","Vietnamese (Northern)"),
 ("vi_S","Vietnamese (Southern)"),
 ("yue","Cantonese"),
-("zh","Mandarin")];
+("zh_hans","Mandarin"),
+("zh_hant","Mandarin"),];
 
 
 
