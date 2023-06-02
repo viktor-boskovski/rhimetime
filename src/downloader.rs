@@ -17,5 +17,19 @@ pub fn download(languages: String) {
 fn initiate_download(languages: &Vec<String>) {
     // TODO: check if folder exists. -> create if necessary
     // download from repo
+    create_languages_dir();
+}
+
+fn create_languages_dir() {
+    const LANG_PATH: &str = "./langs";
+    match std::fs::metadata(&LANG_PATH) {
+        Ok(_) => {},
+        Err(_) => {
+            match std::fs::create_dir(LANG_PATH) {
+                Ok(_) => {},
+                Err(err) => {println!("An Error occured:\t{err}")}
+            }
+        }
+    }
 }
 
