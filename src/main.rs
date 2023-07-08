@@ -1,4 +1,6 @@
 mod downloader;
+mod wordloading;
+mod scoring;
 
 const USAGE: &str = include_str!("txt/usage.txt");
 
