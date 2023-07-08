@@ -16,13 +16,16 @@ $ rhimetime find --pure text # looks for pure rhymes only
 
 ## TODO
 
-[ ] everything
-  [ ] downloading system
-  [ ] matching
-  [ ] scoring
+- [ ] everything
+  - [x] downloading system
+  - [ ] matching
+  - [ ] scoring
+    - [ ] syllable splitting (phonotactics)
+    - [x] vowels
+    - [ ] consonants
 
-[ ] everything else 
-  [ ] maybe TUI
+- [ ] everything else 
+  - [ ] maybe TUI
 
 
 
